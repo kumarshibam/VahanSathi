@@ -2541,3 +2541,103 @@ body {
         transform: translateY(0);
     }
 }
+
+/* =====================================
+   TABLET RESPONSIVE FIX
+   Phone and Laptop remain unchanged
+===================================== */
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    /* Header */
+    .topbar {
+        width: calc(100% - 48px);
+        height: auto;
+        min-height: 105px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 14px 0;
+        row-gap: 12px;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+    .desktop-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: clamp(16px, 3vw, 30px);
+        margin-left: 0;
+    }
+
+    .desktop-nav a {
+        font-size: 12px;
+    }
+
+    .location-chip {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .nav-emergency {
+        padding: 11px 13px;
+        font-size: 10px;
+    }
+
+    /* Hero */
+    .section-wrap {
+        width: calc(100% - 64px);
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        min-height: auto;
+        padding: 55px 0 65px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 4.5vw, 48px);
+        letter-spacing: -2px;
+    }
+
+    .hero-lead {
+        font-size: 14px;
+    }
+
+    .hero-photo-shell {
+        height: clamp(300px, 38vw, 390px);
+    }
+
+    .card-location {
+        left: -12px;
+    }
+
+    .card-help {
+        right: -10px;
+    }
+
+    /* Quick Assistance */
+    .quick-panel {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 26px;
+    }
+
+    .quick-options {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .quick-option {
+        padding: 13px 9px;
+    }
+
+    /* Provider cards */
+    .provider-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
