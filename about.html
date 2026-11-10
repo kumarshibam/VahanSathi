@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fa">
+    <meta name="description" content="Discover VahanSathi, your local roadside assistance companion in Sambalpur, Odisha.">
+    <title>About VahanSathi | Your Roadside Assistance Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <style>
+        /* ==================== PAGE HERO ==================== */
+        .about-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 90px 0 85px;
+        }
+        .about-hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            top: -180px;
+            right: -100px;
+            background: #fff0c7;
+            filter: blur(90px);
+            border-radius: 50%;
+            opacity: 0.65;
+            pointer-events: none;
+        }
+        .about-hero-inner {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 55px;
+        }
+        .about-hero-copy {
+            max-width: 620px;
+        }
+        .about-hero h1 {
+            margin: 22px 0;
+            font: 800 clamp(38px, 5.5vw, 66px)/1.12 Manrope, sans-serif;
+            letter-spacing: -3px;
+            color: #26343d;
+        }
+        .about-hero h1 em {
+            color: #d59a08;
+            font-style: normal;
+        }
+        .about-hero-copy > p {
+            max-width: 520px;
+            color: #87939b;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+        .about-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+        .about-hero-visual {
+            position: relative;
+            min-height: 370px;
+            display: grid;
+            place-items: center;
+        }
+        .about-visual-card {
+            width: 100%;
+            max-width: 390px;
+            min-height: 320px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(145deg, #fff8e7, #fff);
+            border: 1px solid #f1e5c7;
+            border-radius: 30px;
+            box-shadow: 0 25px 65px #26343d12;
+        }
+        .about-visual-icon {
+            width: 78px;
+            height: 78px;
+            display: grid;
+            place-items: center;
+            background: #ffedbd;
+            color: #bd8500;
+            border-radius: 24px;
+        }
+        .about-visual-icon svg {
+            width: 38px;
+            height: 38px;
+        }
+        .about-visual-card h3 {
+            margin: 25px 0 10px;
+            font: 800 27px Manrope, sans-serif;
+            color: #26343d;
+        }
+        .about-visual-card p {
+            color: #89959c;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        .visual-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 25px;
+            padding-top: 18px;
+            border-top: 1px solid #eee5d2;
+        }
+        .visual-bottom span {
+            color: #87939b;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .visual-bottom i {
+            color: #d59a08;
+        }
+
+        /* ==================== INTRODUCTION ==================== */
+        .about-intro {
+            padding: 75px 0;
+            background: #fff;
+        }
+        .about-intro-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 65px;
+            align-items: start;
+        }
+        .about-intro-heading h2 {
+            margin-top: 18px;
+            font: 800 clamp(29px, 4vw, 42px)/1.2 Manrope, sans-serif;
+            letter-spacing: -1.5px;
+            color: #26343d;
+        }
+        .about-intro-text p {
+            margin-bottom: 17px;
+            color: #87939b;
+            font-size: 14px;
+            line-height: 2;
+        }
+        .about-intro-text strong {
+            color: #34444e;
+        }
+
+        /* ==================== PURPOSE SECTION ==================== */
+        .purpose-section {
+            padding: 85px 0;
+        }
+        .about-section-heading {
+            max-width: 650px;
+            margin-bottom: 38px;
+        }
+        .about-section-heading h2 {
+            margin: 15px 0;
+            font: 800 clamp(29px, 4vw, 42px)/1.2 Manrope, sans-serif;
+            letter-spacing: -1.5px;
+            color: #26343d;
+        }
+        .about-section-heading h2 em {
+            color: #d59a08;
+            font-style: normal;
+        }
+        .about-section-heading p {
+            color: #87939b;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        .purpose-card {
+            padding: 29px;
+            background: #fff;
+            border: 1px solid #e9edef;
+            border-radius: 21px;
+            transition: 0.3s ease;
+        }
+        .purpose-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px #26343d0c;
+            border-color: #f0d58d;
+        }
+        .purpose-icon {
+            width: 50px;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 22px;
+            background: #fff4d7;
+            border-radius: 15px;
+            color: #c18b09;
+        }
+        .purpose-icon svg {
+            width: 23px;
+        }
+        .purpose-card h3 {
+            margin-bottom: 10px;
+            font: 800 17px Manrope, sans-serif;
+            color: #26343d;
+        }
+        .purpose-card p {
+            color: #89959c;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* ==================== HOW IT HELPS ==================== */
+        .about-features {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .feature-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .feature-list {
+            display: grid;
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .feature-check {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            background: #eaf7ef;
+            color: #238450;
+            border-radius: 50%;
+        }
+        .feature-check svg {
+            width: 16px;
+        }
+        .feature-item h3 {
+            margin-bottom: 5px;
+            font: 800 15px Manrope, sans-serif;
+            color: #34444e;
+        }
+        .feature-item p {
+            color: #89959c;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+        .feature-visual {
+            min-height: 390px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+            background: #f7f8fa;
+            border: 1px solid #e9edef;
+            border-radius: 25px;
+        }
+        .feature-demo-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 17px;
+            background: #fff;
+            border: 1px solid #e9edef;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px #26343d06;
+        }
+        .demo-icon {
+            width: 45px;
+            height: 45px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            background: #fff3d3;
+            color: #c18b09;
+            border-radius: 13px;
+        }
+        .demo-icon svg {
+            width: 21px;
+        }
+        .demo-info {
+            flex: 1;
+        }
+        .demo-info b {
+            display: block;
+            margin-bottom: 5px;
+            color: #34444e;
+            font: 800 13px Manrope, sans-serif;
+        }
+        .demo-info small {
+            color: #929da4;
+            font-size: 10px;
+        }
+        .demo-arrow {
+            color: #d59a08;
+        }
+
+        /* ==================== LOCAL COVERAGE ==================== */
+        .about-local {
+            padding: 85px 0;
+        }
+        .local-card {
+            position: relative;
+            overflow: hidden;
+            padding: 55px;
+            background: #26343d;
+            border-radius: 27px;
+        }
+        .local-card::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            right: -100px;
+            bottom: -210px;
+            border: 55px solid #ffffff0b;
+            border-radius: 50%;
+        }
+        .local-content {
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+        }
+        .local-content .mini-label {
+            color: #f3c95f;
+        }
+        .local-content h2 {
+            margin: 18px 0;
+            color: #fff;
+            font: 800 clamp(29px, 4vw, 43px)/1.2 Manrope, sans-serif;
+            letter-spacing: -1.5px;
+        }
+        .local-content h2 em {
+            color: #f2c34d;
+            font-style: normal;
+        }
+        .local-content p {
+            color: #c0cbd0;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+        .local-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+        .local-tags span {
+            padding: 9px 14px;
+            color: #fff;
+            background: #ffffff13;
+            border: 1px solid #ffffff20;
+            border-radius: 30px;
+            font-size: 11px;
+        }
+
+        /* ==================== FINAL CTA ==================== */
+        .about-cta {
+            padding: 0 0 85px;
+            text-align: center;
+        }
+        .about-cta h2 {
+            margin: 15px 0;
+            color: #26343d;
+            font: 800 clamp(28px, 4vw, 40px) Manrope, sans-serif;
+            letter-spacing: -1px;
+        }
+        .about-cta p {
+            max-width: 500px;
+            margin: 0 auto 25px;
+            color: #87939b;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        .about-cta .btn {
+            display: inline-flex;
+            text-decoration: none;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 850px) {
+            .about-hero-inner {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .about-hero-visual {
+                min-height: 300px;
+            }
+            .about-visual-card {
+                max-width: 100%;
+            }
+            .about-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .feature-layout {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            .purpose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 560px) {
+            .about-hero {
+                padding: 55px 0;
+            }
+            .about-hero h1 {
+                letter-spacing: -1.8px;
+            }
+            .about-hero-visual {
+                min-height: 280px;
+            }
+            .about-visual-card {
+                min-height: 280px;
+                padding: 25px;
+            }
+            .about-intro,
+            .purpose-section,
+            .about-features,
+            .about-local {
+                padding: 60px 0;
+            }
+            .purpose-grid {
+                grid-template-columns: 1fr;
+            }
+            .purpose-card {
+                padding: 24px;
+            }
+            .feature-visual {
+                min-height: auto;
+                padding: 18px;
+            }
+            .local-card {
+                padding: 30px 24px;
+            }
+            .about-cta {
+                padding-bottom: 65px;
+            }
+        }
+
+        /* ==================== PAGE TRANSITIONS ==================== */
+        body {
+            animation: pageFadeIn 0.45s ease both;
+        }
+        @keyframes pageFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s cubic-bezier(.2, .7, .2, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            body {
+                animation: none;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="topbar">
+        <a class="brand" href="index.html" aria-label="VahanSathi Home">
+            <span class="brand-mark">
+                <i data-lucide="wrench"></i>
+            </span>
+            <span>
+                VahanSathi<span class="brand-dot">.</span>
+                <small>ON-ROAD ASSISTANCE</small>
+            </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#directory">Find Help</a>
+            <a href="index.html#how">How It Works</a>
+            <a class="active" href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a class="nav-emergency" href="index.html#directory">
+            <i data-lucide="search"></i>
+            Find Help
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+            <i data-lucide="menu"></i>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+        <section class="about-hero">
+            <div class="section-wrap about-hero-inner">
+                <div class="about-hero-copy">
+                    <span class="mini-label">
+                        THE STORY BEHIND VAHANSATHI
+                    </span>
+                    <h1>
+                        Every journey deserves
+                        <em>a helping hand.</em>
+                    </h1>
+                    <p>
+                        Vehicle breakdowns are unexpected. Finding the
+                        right help shouldn't be difficult. VahanSathi
+                        brings local automobile service information
+                        together to make roadside assistance discovery
+                        simpler and more convenient.
+                    </p>
+                    <div class="about-hero-actions">
+                        <a href="index.html#directory" class="btn btn-primary">
+                            <i data-lucide="search"></i>
+                            Explore Services
+                        </a>
+                        <a href="contact.html" class="btn btn-soft">
+                            Contact Us
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-hero-visual">
+                    <div class="about-visual-card">
+                        <div>
+                            <span class="about-visual-icon">
+                                <i data-lucide="life-buoy"></i>
+                            </span>
+                            <h3>Your road.<br>Your journey.<br>Your VahanSathi.</h3>
+                            <p>
+                                Helping vehicle owners discover
+                                local assistance when they need it.
+                            </p>
+                        </div>
+                        <div class="visual-bottom">
+                            <span>
+                                <i data-lucide="map-pin"></i>
+                                SAMBALPUR, ODISHA
+                            </span>
+                            <i data-lucide="arrow-up-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== INTRODUCTION ==================== -->
+        <section class="about-intro">
+            <div class="section-wrap about-intro-grid">
+                <div class="about-intro-heading">
+                    <span class="mini-label">GET TO KNOW US</span>
+                    <h2>
+                        More than a directory.
+                        <br>
+                        A simpler way to find help.
+                    </h2>
+                </div>
+
+                <div class="about-intro-text">
+                    <p>
+                        <strong>VahanSathi</strong> is a web-based
+                        roadside assistance discovery platform developed
+                        with a simple idea: make it easier for people
+                        to find automobile service providers in their
+                        local area.
+                    </p>
+                    <p>
+                        Whether a bike stops working, a car develops
+                        a mechanical problem, an auto-rickshaw needs
+                        assistance or a vehicle requires towing,
+                        users can explore relevant service listings
+                        through one convenient platform.
+                    </p>
+                    <p>
+                        The platform provides service categories,
+                        local provider information, direct calling
+                        options, location support and map directions.
+                        It is designed to reduce the effort involved
+                        in finding roadside assistance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== OUR PURPOSE ==================== -->
+        <section class="purpose-section section-wrap">
+            <div class="about-section-heading">
+                <span class="mini-label">OUR PURPOSE</span>
+                <h2>
+                    Designed around
+                    <em>real roadside needs.</em>
+                </h2>
+                <p>
+                    Our goal is to make local automobile assistance
+                    easier to discover, access and explore.
+                </p>
+            </div>
+
+            <div class="purpose-grid">
+                <article class="purpose-card">
+                    <span class="purpose-icon">
+                        <i data-lucide="search"></i>
+                    </span>
+                    <h3>Easy Discovery</h3>
+                    <p>
+                        Find mechanics, garages, tyre shops and towing
+                        services without searching multiple places.
+                    </p>
+                </article>
+
+                <article class="purpose-card">
+                    <span class="purpose-icon">
+                        <i data-lucide="map-pinned"></i>
+                    </span>
+                    <h3>Local Assistance</h3>
+                    <p>
+                        Explore service providers and area-based
+                        listings across Sambalpur district.
+                    </p>
+                </article>
+
+                <article class="purpose-card">
+                    <span class="purpose-icon">
+                        <i data-lucide="phone-call"></i>
+                    </span>
+                    <h3>Direct Communication</h3>
+                    <p>
+                        Contact listed service providers directly
+                        through their available phone numbers.
+                    </p>
+                </article>
+
+                <article class="purpose-card">
+                    <span class="purpose-icon">
+                        <i data-lucide="navigation"></i>
+                    </span>
+                    <h3>Location Assistance</h3>
+                    <p>
+                        Use location support and map directions
+                        to help find nearby service providers.
+                    </p>
+                </article>
+
+                <article class="purpose-card">
+                    <span class="purpose-icon">
+                        <i data-lucide="car-front"></i>
+                    </span>
+                    <h3>Multiple Vehicles</h3>
+                    <p>
+                        Discover relevant services for two-wheelers,
+                        three-wheelers and four-wheelers.
+                    </p>
+                </article>
+
+                <article class="purpose-card">
+                    <span class="purpose-icon">
+                        <i data-lucide="user-round-check"></i>
+                    </span>
+                    <h3>Simple Access</h3>
+                    <p>
+                        Explore the platform without creating
+                        an account or going through a login process.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== HOW IT HELPS ==================== -->
+        <section class="about-features">
+            <div class="section-wrap feature-layout">
+                <div>
+                    <span class="mini-label">A SIMPLE EXPERIENCE</span>
+                    <div class="about-section-heading">
+                        <h2>
+                            Roadside assistance,
+                            <em>made easier.</em>
+                        </h2>
+                        <p>
+                            VahanSathi brings useful features together
+                            so users can quickly explore the help
+                            they are looking for.
+                        </p>
+                    </div>
+
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <span class="feature-check">
+                                <i data-lucide="check"></i>
+                            </span>
+                            <div>
+                                <h3>Choose your service</h3>
+                                <p>
+                                    Select repair, flat tyre, towing
+                                    or key assistance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <span class="feature-check">
+                                <i data-lucide="check"></i>
+                            </span>
+                            <div>
+                                <h3>Find a local provider</h3>
+                                <p>
+                                    Search by service, mechanic name
+                                    or area.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <span class="feature-check">
+                                <i data-lucide="check"></i>
+                            </span>
+                            <div>
+                                <h3>Connect directly</h3>
+                                <p>
+                                    Call the listed provider or
+                                    open directions in Google Maps.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <span class="feature-check">
+                                <i data-lucide="check"></i>
+                            </span>
+                            <div>
+                                <h3>Use location support</h3>
+                                <p>
+                                    Allow GPS access to identify
+                                    your current coordinates.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-visual">
+                    <div class="feature-demo-card">
+                        <span class="demo-icon">
+                            <i data-lucide="wrench"></i>
+                        </span>
+                        <span class="demo-info">
+                            <b>Vehicle Repair</b>
+                            <small>Mechanical assistance</small>
+                        </span>
+                        <i class="demo-arrow" data-lucide="arrow-up-right"></i>
+                    </div>
+
+                    <div class="feature-demo-card">
+                        <span class="demo-icon">
+                            <i data-lucide="disc-3"></i>
+                        </span>
+                        <span class="demo-info">
+                            <b>Flat Tyre</b>
+                            <small>Tyre and puncture services</small>
+                        </span>
+                        <i class="demo-arrow" data-lucide="arrow-up-right"></i>
+                    </div>
+
+                    <div class="feature-demo-card">
+                        <span class="demo-icon">
+                            <i data-lucide="truck"></i>
+                        </span>
+                        <span class="demo-info">
+                            <b>Towing Assistance</b>
+                            <small>Vehicle recovery services</small>
+                        </span>
+                        <i class="demo-arrow" data-lucide="arrow-up-right"></i>
+                    </div>
+
+                    <div class="feature-demo-card">
+                        <span class="demo-icon">
+                            <i data-lucide="key-round"></i>
+                        </span>
+                        <span class="demo-info">
+                            <b>Key Lost</b>
+                            <small>Vehicle key assistance</small>
+                        </span>
+                        <i class="demo-arrow" data-lucide="arrow-up-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== LOCAL COVERAGE ==================== -->
+        <section class="about-local section-wrap">
+            <div class="local-card">
+                <div class="local-content">
+                    <span class="mini-label">
+                        ROOTED IN SAMBALPUR
+                    </span>
+                    <h2>
+                        Built for our roads.
+                        <br>
+                        Focused on <em>our community.</em>
+                    </h2>
+                    <p>
+                        VahanSathi currently focuses on automobile
+                        assistance discovery within Sambalpur district,
+                        Odisha. From Ainthapali and Budharaja to Burla,
+                        Bareipali and nearby areas, the platform aims
+                        to make local service information easier to find.
+                    </p>
+                    <div class="local-tags">
+                        <span>Ainthapali</span>
+                        <span>Budharaja</span>
+                        <span>Bareipali</span>
+                        <span>Burla</span>
+                        <span>Remed</span>
+                        <span>Bhalupali</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FINAL CTA ==================== -->
+        <section class="about-cta section-wrap">
+            <span class="mini-label">READY TO EXPLORE?</span>
+            <h2>Help is just a few clicks away.</h2>
+            <p>
+                Explore local mechanics and roadside service
+                providers through VahanSathi.
+            </p>
+            <a href="index.html#directory" class="btn btn-primary">
+                <i data-lucide="search"></i>
+                Find Assistance
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="section-wrap footer-inner">
+            <a class="brand footer-brand" href="index.html">
+                <span class="brand-mark">
+                    <i data-lucide="wrench"></i>
+                </span>
+                <span>
+                    VahanSathi<span class="brand-dot">.</span>
+                    <small>ON-ROAD ASSISTANCE</small>
+                </span>
+            </a>
+
+            <p>
+                Roadside assistance discovery for Sambalpur district, Odisha.
+            </p>
+
+            <div class="footer-bottom">
+                <span>
+                    © <span id="year"></span> VahanSathi
+                </span>
+                <span>Made to get you moving.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        document.getElementById("menuToggle")?.addEventListener("click", () => {
+            const navigation = document.querySelector(".desktop-nav");
+            navigation?.classList.toggle("open");
+        });
+
+        // Smooth scroll-reveal animation
+        const revealElements = document.querySelectorAll(
+            ".about-hero-copy, .about-hero-visual, .about-intro-grid, " +
+            ".about-section-heading, .purpose-card, .feature-item, " +
+            ".feature-visual, .local-card, .about-cta"
+        );
+
+        revealElements.forEach(element => {
+            element.classList.add("reveal");
+        });
+
+        if ("IntersectionObserver" in window) {
+            const revealObserver = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.12 }
+            );
+
+            revealElements.forEach(element => {
+                revealObserver.observe(element);
+            });
+        } else {
+            revealElements.forEach(element => {
+                element.classList.add("visible");
+            });
+        }
+
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

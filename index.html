@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fa">
+
+    <meta name="description"
+        content="VahanSathi provides roadside assistance, mechanic contacts, garage and towing services across Sambalpur district, Odisha.">
+
+    <title>VahanSathi | Your Roadside Assistance Partner</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <a class="brand" href="#home" aria-label="VahanSathi Home">
+            <span class="brand-mark">
+                <i data-lucide="wrench"></i>
+            </span>
+
+            <span>
+                VahanSathi<span class="brand-dot">.</span>
+                <small>ON-ROAD ASSISTANCE</small>
+            </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+            <a class="active" href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#directory">Find Help</a>
+            <a href="#how">How It Works</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="location-chip" id="locationTop" type="button">
+            <i data-lucide="map-pin"></i>
+            <span id="locationTopText">Sambalpur District</span>
+            <i data-lucide="chevron-down"></i>
+        </button>
+
+        <button class="nav-emergency" id="navEmergency" type="button">
+            <i data-lucide="phone-call"></i>
+            Emergency SOS
+        </button>
+
+        <button class="menu-toggle" id="menuToggle"
+        type="button" aria-label="Open Menu"
+        aria-expanded="false">
+
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main id="home">
+
+        <!-- ================= HERO SECTION ================= -->
+
+        <section class="hero section-wrap">
+
+            <div class="hero-copy reveal">
+
+                <div class="eyebrow">
+                    <span class="pulse"></span>
+                    ROADSIDE HELP · SAMBALPUR, ODISHA
+                </div>
+
+                <h1>
+                    Stranded on the road?
+                    <br>
+                    <em>Help is closer</em> than you think.
+                </h1>
+
+                <p class="hero-lead">
+                    Find nearby mechanics, puncture shops and towing
+                    support across Sambalpur district. No account.
+                    No waiting around.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a class="btn btn-primary" href="#directory">
+                        <i data-lucide="search"></i>
+                        Find a Mechanic
+                    </a>
+
+                    <button class="btn btn-soft" id="heroGps" type="button">
+                        <i data-lucide="navigation"></i>
+                        Detect My Location
+                    </button>
+
+                </div>
+
+                <div class="trust-row">
+
+                    <span>
+                        <i data-lucide="check-circle-2"></i>
+                        No Login Required
+                    </span>
+
+                    <span>
+                        <i data-lucide="map"></i>
+                        Sambalpur District Only
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual reveal">
+
+                <div class="hero-photo-shell">
+
+                    <div class="hero-photo"></div>
+                    <div class="photo-glow"></div>
+
+                    <div class="floating-card card-location">
+
+                        <span class="float-icon">
+                            <i data-lucide="map-pin"></i>
+                        </span>
+
+                        <span>
+                            <b id="heroLocation">Your Location</b>
+                            <small id="heroCoords">
+                                Enable GPS to locate you
+                            </small>
+                        </span>
+
+                        <span class="live-dot"></span>
+
+                    </div>
+
+
+                    <div class="floating-card card-help">
+
+                        <span class="help-icon">
+                            <i data-lucide="life-buoy"></i>
+                        </span>
+
+                        <span>
+                            <b>Roadside Support</b>
+                            <small>Mechanics · Tyres · Towing · Key Assistance</small>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ASSISTANCE ================= -->
+
+        <section class="quick-panel section-wrap reveal"
+            aria-label="Quick Assistance">
+
+            <div class="quick-intro">
+
+                <span class="mini-label">QUICK ASSISTANCE</span>
+
+                <h2>
+                    What do you need
+                    <br>
+                    help with?
+                </h2>
+
+                <p>Choose a service to find relevant help.</p>
+
+            </div>
+
+
+            <div class="quick-options">
+
+                <button class="quick-option selected"
+                    data-service="all" type="button">
+
+                    <span class="quick-icon">
+                        <i data-lucide="layout-grid"></i>
+                    </span>
+
+                    <b>All Services</b>
+                    <small>Explore nearby help</small>
+
+                </button>
+
+
+                <button class="quick-option"
+                    data-service="repair" type="button">
+
+                    <span class="quick-icon">
+                        <i data-lucide="wrench"></i>
+                    </span>
+
+                    <b>Repair</b>
+                    <small>Mechanical issues</small>
+
+                </button>
+
+
+                <button class="quick-option"
+                    data-service="tyre" type="button">
+
+                    <span class="quick-icon">
+                        <i data-lucide="disc-3"></i>
+                    </span>
+
+                    <b>Flat Tyre</b>
+                    <small>Puncture & tyre</small>
+
+                </button>
+
+
+                <button class="quick-option"
+                    data-service="towing" type="button">
+
+                    <span class="quick-icon">
+                        <i data-lucide="truck"></i>
+                    </span>
+
+                    <b>Towing</b>
+                    <small>Vehicle recovery</small>
+
+                </button>
+
+
+                <button class="quick-option"
+                    data-service="key" type="button">
+
+                    <span class="quick-icon">
+                        <i data-lucide="key-round"></i>
+                    </span>
+
+                    <b>Key Lost</b>
+                    <small>Car, Bike & Auto Key Assistance</small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= VEHICLE SERVICES ================= -->
+
+        <section class="section-wrap services-section" id="services">
+
+            <div class="section-heading reveal">
+
+                <div>
+                    <span class="mini-label">
+                        BUILT FOR EVERY JOURNEY
+                    </span>
+
+                    <h2>
+                        One platform.
+                        <em>Every vehicle.</em>
+                    </h2>
+                </div>
+
+                <p>
+                    Choose your vehicle type and find service
+                    providers suited to your ride.
+                </p>
+
+            </div>
+
+
+            <div class="vehicle-grid">
+
+                <!-- Two Wheeler -->
+
+                <button class="vehicle-card reveal"
+                    data-vehicle="2" type="button">
+
+                    <span class="vehicle-art bike-art">
+                        <i data-lucide="bike"></i>
+                    </span>
+
+                    <span class="vehicle-meta">
+                        <small>TWO WHEELER</small>
+                        <b>Bike & Scooter</b>
+
+                        <span>
+                            Repairs, punctures, battery & more
+                            <i data-lucide="arrow-up-right"></i>
+                        </span>
+                    </span>
+
+                </button>
+
+
+                <!-- Three Wheeler -->
+
+                <button class="vehicle-card reveal"
+                    data-vehicle="3" type="button">
+
+                    <span class="vehicle-art auto-art">
+                        <i data-lucide="car-front"></i>
+                    </span>
+
+                    <span class="vehicle-meta">
+                        <small>THREE WHEELER</small>
+                        <b>Auto & Commercial</b>
+
+                        <span>
+                            Auto-rickshaw and Piaggio support
+                            <i data-lucide="arrow-up-right"></i>
+                        </span>
+                    </span>
+
+                </button>
+
+
+                <!-- Four Wheeler -->
+
+                <button class="vehicle-card reveal"
+                    data-vehicle="4" type="button">
+
+                    <span class="vehicle-art car-art">
+                        <i data-lucide="car"></i>
+                    </span>
+
+                    <span class="vehicle-meta">
+                        <small>FOUR WHEELER</small>
+                        <b>Car & SUV</b>
+
+                        <span>
+                            Mechanical, electrical & towing
+                            <i data-lucide="arrow-up-right"></i>
+                        </span>
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SAMBALPUR SERVICE AREAS ================= -->
+
+        <section class="network-section section-wrap reveal"
+            id="network">
+
+            <div class="network-heading">
+
+                <div>
+                    <span class="mini-label network-label">
+                        <span class="network-live-dot"></span>
+                        SAMBALPUR SERVICE AREAS
+                    </span>
+
+                    <h2>
+                        Local breakdown
+                        <em>coverage hubs</em>
+                    </h2>
+                </div>
+
+                <a href="#directory" class="network-link">
+                    View All Listed Workshops
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="hub-grid">
+
+                <button class="hub-card" data-hub="Bhalupali" type="button">
+                    <span class="hub-dot"></span>
+                    <b>Bhalupali</b>
+                    <small>Jharsuguda Road</small>
+                    <span class="hub-eta">Explore Providers</span>
+                </button>
+
+
+                <button class="hub-card" data-hub="Bareipali" type="button">
+                    <span class="hub-dot"></span>
+                    <b>Bareipali</b>
+                    <small>NH-53 Bypass</small>
+                    <span class="hub-eta">Explore Providers</span>
+                </button>
+
+
+                <button class="hub-card" data-hub="Ainthapali" type="button">
+                    <span class="hub-dot"></span>
+                    <b>Ainthapali</b>
+                    <small>Bus Stand Chowk</small>
+                    <span class="hub-eta">Explore Providers</span>
+                </button>
+
+
+                <button class="hub-card" data-hub="Budharaja" type="button">
+                    <span class="hub-dot"></span>
+                    <b>Budharaja</b>
+                    <small>Hill Top / SRIT</small>
+                    <span class="hub-eta">Explore Providers</span>
+                </button>
+
+
+                <button class="hub-card" data-hub="Burla" type="button">
+                    <span class="hub-dot"></span>
+                    <b>Burla</b>
+                    <small>Medical College</small>
+                    <span class="hub-eta">Explore Providers</span>
+                </button>
+
+
+                <button class="hub-card" data-hub="Remed" type="button">
+                    <span class="hub-dot"></span>
+                    <b>Remed</b>
+                    <small>Flyover Junction</small>
+                    <span class="hub-eta">Explore Providers</span>
+                </button>
+
+            </div>
+
+
+            <p class="hub-disclaimer">
+                <i data-lucide="info"></i>
+                These are area shortcuts, not live dispatch centres.
+                Provider presence and arrival times must be confirmed by phone.
+            </p>
+
+        </section>
+
+
+        <!-- ================= MECHANIC DIRECTORY ================= -->
+
+        <section class="directory-section" id="directory">
+
+            <div class="section-wrap">
+
+                <div class="section-heading directory-heading reveal">
+
+                    <div>
+                        <span class="mini-label">
+                            LOCAL SERVICE DIRECTORY
+                        </span>
+
+                        <h2>
+                            Find help around
+                            <em>Sambalpur.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Search by garage, service or area.
+                        Call directly or open directions.
+                    </p>
+
+                </div>
+
+
+                <!-- Search and Directory Controls -->
+
+                <div class="directory-tools reveal">
+
+                    <label class="search-box">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            id="searchInput"
+                            type="search"
+                            placeholder="Search mechanic, service or area..."
+                            autocomplete="off"
+                        >
+
+                    </label>
+
+
+                    <button class="filter-button"
+                        id="filterToggle" type="button">
+
+                        <i data-lucide="sliders-horizontal"></i>
+                        Filters
+
+                        <span id="filterCount" class="filter-count">0</span>
+
+                    </button>
+
+
+                    <button class="nearby-button"
+                        id="nearbyButton" type="button">
+
+                        <i data-lucide="locate-fixed"></i>
+                        Sort by Distance
+
+                    </button>
+
+                </div>
+
+
+                <!-- Directory Filters -->
+
+                <div class="filter-row" id="filterRow">
+
+                    <div class="filter-group">
+
+                        <span>Vehicle</span>
+
+                        <button class="filter-pill active"
+                            data-filter-vehicle="all" type="button">
+                            All
+                        </button>
+
+                        <button class="filter-pill"
+                            data-filter-vehicle="2" type="button">
+                            2-Wheeler
+                        </button>
+
+                        <button class="filter-pill"
+                            data-filter-vehicle="3" type="button">
+                            3-Wheeler
+                        </button>
+
+                        <button class="filter-pill"
+                            data-filter-vehicle="4" type="button">
+                            4-Wheeler
+                        </button>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <span>Service</span>
+
+                        <button class="filter-pill active"
+                            data-filter-kind="all" type="button">
+                            All Services
+                        </button>
+
+                        <button class="filter-pill"
+                            data-filter-kind="repair" type="button">
+                            Repair
+                        </button>
+
+                        <button class="filter-pill"
+                            data-filter-kind="tyre" type="button">
+                            Tyres
+                        </button>
+
+                        <button class="filter-pill"
+                            data-filter-kind="towing" type="button">
+                            Towing
+                        </button>
+
+                        <button class="filter-pill"
+                            data-filter-kind="key" type="button">
+                            Key Assistance
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Search Results -->
+
+                <div class="results-line">
+
+                    <span id="resultsCount">
+                        Showing local service providers
+                    </span>
+
+                    <span class="district-tag">
+                        <i data-lucide="shield-check"></i>
+                        Sambalpur District Directory
+                    </span>
+
+                </div>
+
+
+                <!-- Provider Cards Render Here -->
+
+                <div class="provider-grid" id="providerGrid"></div>
+
+
+                <!-- Empty Search Results -->
+
+                <div class="empty-state" id="emptyState" hidden>
+
+                    <span>
+                        <i data-lucide="map-search"></i>
+                    </span>
+
+                    <h3>No Matching Providers</h3>
+
+                    <p>
+                        Try another service, vehicle type or area.
+                    </p>
+
+                    <button class="btn btn-soft"
+                        id="clearFilters" type="button">
+                        Clear Filters
+                    </button>
+
+                </div>
+
+
+                <!-- Directory Disclaimer -->
+
+                <div class="directory-note">
+
+                    <i data-lucide="info"></i>
+
+                    <span>
+                        Directory details are compiled from publicly
+                        available business listings. Please call to confirm
+                        current availability, service coverage and pricing
+                        before travelling. VahanSathi does not certify or
+                        guarantee third-party providers.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOCATION AND GPS ================= -->
+
+        <section class="location-section section-wrap" id="how">
+
+            <div class="location-card reveal">
+
+                <div class="location-copy">
+
+                    <span class="mini-label">
+                        YOUR LOCATION, YOUR CHOICE
+                    </span>
+
+                    <h2>
+                        Know where you are.
+                        <br>
+                        <em>Find who’s nearby.</em>
+                    </h2>
+
+                    <p>
+                        Allow location access to see your coordinates,
+                        search around your current position and open
+                        directions in Google Maps.
+                    </p>
+
+                    <button class="btn btn-primary"
+                        id="locationButton" type="button">
+
+                        <i data-lucide="crosshair"></i>
+                        Use My Current Location
+
+                    </button>
+
+                    <div class="location-status" id="locationStatus">
+                        Location has not been shared.
+                    </div>
+
+                </div>
+
+
+                <!-- Map Preview -->
+
+                <div class="map-preview">
+
+                    <div class="map-grid"></div>
+
+                    <div class="map-road road-one"></div>
+                    <div class="map-road road-two"></div>
+                    <div class="map-road road-three"></div>
+
+                    <div class="map-pin-main">
+                        <span></span>
+                        <b>You are here</b>
+                    </div>
+
+                    <div class="map-label label-a">Ainthapali</div>
+                    <div class="map-label label-b">Budharaja</div>
+                    <div class="map-label label-c">Modipara</div>
+
+                    <div class="map-caption">
+                        <i data-lucide="map-pin"></i>
+                        Sambalpur, Odisha
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EMERGENCY SOS ================= -->
+
+        <section class="sos-band section-wrap reveal">
+
+            <div class="sos-symbol">
+                <i data-lucide="siren"></i>
+            </div>
+
+            <div>
+                <span class="mini-label">NEED URGENT HELP?</span>
+
+                <h2>Don’t stay stranded.</h2>
+
+                <p>
+                    Share your location and quickly reach
+                    a roadside assistance contact.
+                </p>
+            </div>
+
+            <button class="btn btn-sos"
+                id="sosButton" type="button">
+
+                <i data-lucide="phone-call"></i>
+                SOS Assistance
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="section-wrap footer-inner">
+
+            <a class="brand footer-brand" href="#home">
+
+                <span class="brand-mark">
+                    <i data-lucide="wrench"></i>
+                </span>
+
+                <span>
+                    VahanSathi<span class="brand-dot">.</span>
+                    <small>ON-ROAD ASSISTANCE</small>
+                </span>
+
+            </a>
+
+            <p>
+                Roadside assistance discovery for Sambalpur district, Odisha.
+            </p>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="year"></span>
+                    VahanSathi · A Local Discovery Utility
+                </span>
+
+                <span>Made to get you moving.</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= MOBILE NAVIGATION ================= -->
+
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+
+        <a class="active" href="#home">
+            <i data-lucide="house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="#services">
+            <i data-lucide="car-front"></i>
+            <span>Services</span>
+        </a>
+
+        <a href="#directory">
+            <i data-lucide="search"></i>
+            <span>Find Help</span>
+        </a>
+
+        <button id="mobileSos" type="button">
+            <i data-lucide="siren"></i>
+            <span>SOS</span>
+        </button>
+
+    </nav>
+
+
+    <!-- ================= SOS MODAL ================= -->
+
+    <div class="modal-backdrop" id="sosModal" aria-hidden="true">
+
+        <section
+            class="sos-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="sosTitle"
+        >
+
+            <button class="modal-close"
+                id="closeSos" type="button" aria-label="Close">
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+
+            <span class="modal-sos-icon">
+                <i data-lucide="siren"></i>
+            </span>
+
+            <span class="mini-label">
+                VahanSathi EMERGENCY ASSISTANCE
+            </span>
+
+            <h2 id="sosTitle">Let’s get you help.</h2>
+
+            <p>
+                Choose a contact below. Your location can be shared
+                through your phone’s calling or messaging app.
+            </p>
+
+
+            <div class="sos-location" id="sosLocation">
+
+                <i data-lucide="map-pin"></i>
+
+                Location not detected yet
+
+                <button id="sosGetLocation" type="button">
+                    Get Location
+                </button>
+
+            </div>
+
+
+            <a class="sos-contact" href="tel:112">
+
+                <span>
+                    <b>Emergency Response</b>
+                    <small>India Emergency Helpline</small>
+                </span>
+
+                <strong>
+                    Call 112
+                    <i data-lucide="phone"></i>
+                </strong>
+
+            </a>
+
+
+            <a class="sos-contact" href="tel:09348408886">
+
+                <span>
+                    <b>Taj Towing Service</b>
+                    <small>Dhanakauda · Sambalpur</small>
+                </span>
+
+                <strong>
+                    Call
+                    <i data-lucide="phone"></i>
+                </strong>
+
+            </a>
+
+
+            <a class="sos-contact" href="tel:9938044147">
+
+                <span>
+                    <b>Mahabir Crane Service</b>
+                    <small>NH-6 · Bareipali</small>
+                </span>
+
+                <strong>
+                    Call
+                    <i data-lucide="phone"></i>
+                </strong>
+
+            </a>
+
+
+            <small class="modal-disclaimer">
+                For life-threatening emergencies, call 112.
+                Third-party towing contacts are independently listed;
+                confirm availability.
+            </small>
+
+        </section>
+
+    </div>
+
+
+    <!-- ================= NOTIFICATION ================= -->
+
+    <div class="toast" id="toast" role="status"></div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

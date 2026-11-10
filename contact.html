@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8fa">
+
+    <meta name="description" content="Contact VahanSathi for roadside assistance and support in Sambalpur, Odisha.">
+
+    <title>Contact Us | VahanSathi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <style>
+        /* ==================== CONTACT PAGE ==================== */
+
+        body {
+            background: #f7f8fa;
+            animation: pageFadeIn 0.4s ease both;
+        }
+
+        /* HERO */
+
+        .page-hero {
+            padding: 65px 20px 55px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            margin: 15px auto;
+            font: 800 clamp(36px, 6vw, 55px) Manrope, sans-serif;
+            letter-spacing: -2px;
+            color: #26343d;
+        }
+
+        .page-hero h1 em {
+            color: #d59a08;
+            font-style: normal;
+        }
+
+        .page-hero h1::after {
+            content: "";
+            display: block;
+            width: 95px;
+            height: 8px;
+            margin: 12px auto 18px;
+            border-radius: 20px;
+            background: #e5a817;
+        }
+
+        .page-hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #87939b;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* MAIN LAYOUT */
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 28px;
+            align-items: start;
+            padding-bottom: 85px;
+        }
+
+        /* LEFT SIDE */
+
+        .contact-info {
+            display: grid;
+            gap: 18px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            min-height: 115px;
+            padding: 23px;
+            background: #fff;
+            border: 1px solid #e5eaf0;
+            border-radius: 24px;
+            box-shadow: 0 8px 25px rgba(30, 45, 60, 0.035);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(30, 45, 60, 0.07);
+        }
+
+        .contact-icon {
+            width: 54px;
+            height: 54px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border-radius: 17px;
+            background: #fff6df;
+            color: #c58e08;
+        }
+
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 6px;
+            color: #87939b;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+        }
+
+        .contact-card p {
+            color: #26343d;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.65;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-card a {
+            color: #26343d;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-card a:hover {
+            color: #c58e08;
+        }
+
+        /* EMERGENCY CARD */
+
+        .contact-card.emergency {
+            background: #fff5f5;
+            border-color: #ffd9dc;
+        }
+
+        .contact-card.emergency .contact-icon {
+            background: #ffe8e9;
+            color: #e34c5d;
+        }
+
+        .contact-card.emergency h3 {
+            color: #b4233c;
+        }
+
+        .contact-card.emergency a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 19px;
+            border-radius: 30px;
+            background: #e91e50;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* RIGHT SIDE FORM */
+
+        .contact-form {
+            padding: 32px;
+            background: #fff;
+            border: 1px solid #e5eaf0;
+            border-radius: 26px;
+            box-shadow: 0 8px 25px rgba(30, 45, 60, 0.035);
+        }
+
+        .form-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #edf0f3;
+        }
+
+        .form-heading h2 {
+            color: #26343d;
+            font: 800 21px Manrope, sans-serif;
+        }
+
+        .form-badge {
+            padding: 9px 15px;
+            border-radius: 30px;
+            background: #fff2cc;
+            color: #986600;
+            font-size: 11px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .contact-form form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 21px 18px;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: #52616a;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            min-height: 53px;
+            padding: 13px 15px;
+            border: 1px solid #e1e7ed;
+            border-radius: 15px;
+            outline: none;
+            background: #f8fafc;
+            color: #26343d;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #a0adba;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #e5ad25;
+            box-shadow: 0 0 0 3px rgba(229, 173, 37, 0.12);
+        }
+
+        .form-group textarea {
+            min-height: 125px;
+            resize: vertical;
+        }
+
+        /* SUBMIT BUTTON */
+
+        .contact-form button {
+            grid-column: 1 / -1;
+            width: 100%;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+            border: none;
+            border-radius: 17px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(220, 140, 0, 0.2);
+        }
+
+        .contact-form button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .form-note {
+            margin-top: 15px;
+            color: #9aa4aa;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        /* SUCCESS MESSAGE */
+
+        .form-message {
+            display: none;
+            margin-top: 15px;
+            padding: 13px 15px;
+            border-radius: 12px;
+            background: #eaf8ef;
+            color: #247447;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .form-message.show {
+            display: block;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .contact-layout {
+                grid-template-columns: 1fr 1.15fr;
+                gap: 18px;
+            }
+
+            .contact-card {
+                padding: 19px;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .page-hero {
+                padding: 45px 18px 35px;
+            }
+
+            .page-hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .page-hero p {
+                font-size: 14px;
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding-bottom: 55px;
+            }
+
+            .contact-info {
+                gap: 13px;
+            }
+
+            .contact-card {
+                min-height: 100px;
+                padding: 19px;
+                border-radius: 20px;
+            }
+
+            .contact-form {
+                padding: 22px;
+                border-radius: 22px;
+            }
+
+            .contact-form form {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+            .form-group.full-width,
+            .contact-form button {
+                grid-column: auto;
+            }
+
+            .form-heading h2 {
+                font-size: 17px;
+            }
+
+            .form-badge {
+                padding: 8px 11px;
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .contact-card {
+                gap: 12px;
+                padding: 15px;
+            }
+
+            .contact-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .contact-card p {
+                font-size: 13px;
+            }
+
+            .contact-form {
+                padding: 17px;
+            }
+
+            .form-heading {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="topbar">
+
+        <a class="brand" href="index.html" aria-label="VahanSathi Home">
+
+            <span class="brand-mark">
+                <i data-lucide="wrench"></i>
+            </span>
+
+            <span>
+                VahanSathi<span class="brand-dot">.</span>
+                <small>ON-ROAD ASSISTANCE</small>
+            </span>
+
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#directory">Find Help</a>
+            <a href="index.html#how">How It Works</a>
+            <a href="about.html">About</a>
+            <a class="active" href="contact.html">Contact</a>
+        </nav>
+
+        <a class="nav-emergency" href="index.html#directory">
+            <i data-lucide="search"></i>
+            Find Help
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open Menu">
+            <i data-lucide="menu"></i>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+
+        <section class="page-hero section-wrap">
+
+            <span class="mini-label">CONTACT VAHANSATHI</span>
+
+            <h1>
+                Get In <em>Touch</em>
+            </h1>
+
+            <p>
+                Need roadside assistance or have a question?
+                We're here to help you.
+            </p>
+
+        </section>
+
+
+        <!-- ==================== CONTACT SECTION ==================== -->
+
+        <section class="contact-layout section-wrap">
+
+            <!-- LEFT CONTACT INFORMATION -->
+
+            <div class="contact-info reveal">
+
+                <!-- OFFICE -->
+
+                <div class="contact-card">
+
+                    <span class="contact-icon">
+                        <i data-lucide="map-pin"></i>
+                    </span>
+
+                    <div>
+                        <h3>Sambalpur Office</h3>
+                        <p>
+                            Budharaja, Sambalpur<br>
+                            Odisha, India — 768004
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- HELPLINES -->
+
+                <div class="contact-card">
+
+                    <span class="contact-icon">
+                        <i data-lucide="phone-call"></i>
+                    </span>
+
+                    <div>
+                        <h3>Direct Helplines</h3>
+
+                        <p>
+                            <a href="tel:+918746923756">+91 87469 23756</a>
+                            <br>
+                            <a href="tel:+919583258112">+91 95832 58112</a>
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-card">
+
+                    <span class="contact-icon">
+                        <i data-lucide="send"></i>
+                    </span>
+
+                    <div>
+                        <h3>Email Dispatch</h3>
+
+                        <p>
+                            <a href="mailto:sbpbreakdownassist@gmail.com">
+                                sbpbreakdownassist@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- EMERGENCY -->
+
+                <div class="contact-card emergency">
+
+                    <span class="contact-icon">
+                        <i data-lucide="shield-alert"></i>
+                    </span>
+
+                    <div>
+                        <h3>Police & Highway Patrol</h3>
+                        <p>Immediate emergency response</p>
+                    </div>
+
+                    <a href="tel:112">Dial 112</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT CALLBACK FORM -->
+
+            <div class="contact-form reveal">
+
+                <div class="form-heading">
+
+                    <h2>Request Roadside Callback</h2>
+
+                    <span class="form-badge">
+                        Quick Support
+                    </span>
+
+                </div>
+
+
+                <form id="contactForm">
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">Your Name *</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">Contact Phone Number *</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="e.g. 9876543210"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            inputmode="numeric"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- VEHICLE -->
+
+                    <div class="form-group">
+
+                        <label for="vehicle">Vehicle Category *</label>
+
+                        <select id="vehicle" name="vehicle" required>
+
+                            <option value="">Select vehicle</option>
+                            <option value="Two Wheeler">Two Wheeler (Bike / Scooter)</option>
+                            <option value="Three Wheeler">Three Wheeler (Auto)</option>
+                            <option value="Four Wheeler">Four Wheeler (Car)</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- LOCALITY -->
+
+                    <div class="form-group">
+
+                        <label for="locality">Your Sambalpur Locality *</label>
+
+                        <select id="locality" name="locality" required>
+
+                            <option value="">Select your locality</option>
+                            <option value="Budharaja">Budharaja</option>
+                            <option value="Ainthapali">Ainthapali</option>
+                            <option value="Bhalupali">Bhalupali</option>
+                            <option value="Modipara">Modipara</option>
+                            <option value="Burla">Burla</option>
+                            <option value="Hirakud">Hirakud</option>
+                            <option value="Dhanupali">Dhanupali</option>
+                            <option value="Khetrajpur">Khetrajpur</option>
+                            <option value="Pension Para">Pension Para</option>
+                            <option value="Bareipali">Bareipali</option>
+                            <option value="Durgapali">Durgapali</option>
+                            <option value="Other">Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ISSUE -->
+
+                    <div class="form-group full-width">
+
+                        <label for="message">Issue Description / Notes</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Describe your vehicle problem..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button type="submit" class="btn btn-primary">
+
+                        <i data-lucide="send"></i>
+
+                        SEND ROADSIDE HELP REQUEST
+
+                    </button>
+
+                </form>
+
+
+                <div class="form-message" id="formMessage" role="status">
+                    Thank you! Your details have been entered successfully.
+                    Actual request submission requires backend integration.
+                </div>
+
+                <p class="form-note">
+                    This is a demonstration form. Your request will not be
+                    transmitted until an email or backend service is connected.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer class="footer">
+
+        <div class="section-wrap footer-inner">
+
+            <a class="brand footer-brand" href="index.html">
+
+                <span class="brand-mark">
+                    <i data-lucide="wrench"></i>
+                </span>
+
+                <span>
+                    VahanSathi<span class="brand-dot">.</span>
+                    <small>ON-ROAD ASSISTANCE</small>
+                </span>
+
+            </a>
+
+            <p>
+                Roadside assistance discovery for Sambalpur district, Odisha.
+            </p>
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span id="year"></span> VahanSathi
+                </span>
+
+                <span>Made to get you moving.</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script>
+
+        // Dynamic copyright year
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Mobile navigation
+
+        const menuToggle = document.getElementById("menuToggle");
+        const desktopNav = document.querySelector(".desktop-nav");
+
+        menuToggle?.addEventListener("click", () => {
+
+            desktopNav?.classList.toggle("open");
+
+        });
+
+
+        // Close mobile navigation after selecting a link
+
+        desktopNav?.querySelectorAll("a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                desktopNav.classList.remove("open");
+            });
+
+        });
+
+
+        // Contact form demonstration
+
+        document.getElementById("contactForm")?.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            const form = event.currentTarget;
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            document.getElementById("formMessage").classList.add("show");
+
+            form.reset();
+
+        });
+
+
+        // Scroll reveal animation
+
+        const revealElements = document.querySelectorAll(
+            ".page-hero, .contact-info, .contact-form"
+        );
+
+        if ("IntersectionObserver" in window) {
+
+            const revealObserver = new IntersectionObserver(
+                (entries, observer) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+            revealElements.forEach(element => {
+                element.classList.add("reveal");
+                revealObserver.observe(element);
+            });
+
+        } else {
+
+            revealElements.forEach(element => {
+                element.classList.add("visible");
+            });
+
+        }
+
+
+        // Initialize Lucide icons
+
+        lucide.createIcons();
+
+    </script>
+
+</body>
+</html>
